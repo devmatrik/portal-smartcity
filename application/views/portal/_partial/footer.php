@@ -18,7 +18,7 @@
             <div class="row">
               <div class="col-md-12">
                 <span style="font-size: 25px;color: white;">Alamat</span><br>
-                <a href="#" style="color: white;">Belum ada....</a>
+                <a href="#" style="color: white;">Jl. Merdeka No.18-21, Babakan Ciamis, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40117</a>
               </div>
             </div>
             <div class="row" style="margin-top:20px">
@@ -30,7 +30,7 @@
             <div class="row" style="margin-top:20px;display:none;">
               <div class="col-md-12">
                 <span style="font-size: 25px;color: white;">Call Center</span><br>
-              <a href="whatsapp://send?text=Halo&phone=" style="color: white;">+62 123-456-789</a>
+              <a href="whatsapp://send?text=Halo&phone=" style="color: white;">belum ada</a>
               </div>
             </div>
           </div>
@@ -74,7 +74,7 @@
           <ul class="footer-social">
             <li><a href="https://www.facebook.com/" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="https://twitter.com/" target="_blank" class="tw"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/" target="_blank" class="insta"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.instagram.com/polrestabesbandung/" target="_blank" class="insta"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
       </div>

@@ -23,7 +23,7 @@
           <div class="add-box">
               <h5>Backoffice Bandung Smart City</h5>
               <ul><li><i class="fas fa-building"></i> <strong>Alamat:</strong> <br>
-                    Belum ada.....
+                    Jl. Merdeka No.18-21, Babakan Ciamis, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40117
                 </li>
                 <li><i class="far fa-envelope"></i><strong> Email:</strong> belumada</li>
                 <li><i class="fab fa-whatsapp"></i> <strong> Whatsapp: </strong><a target="_blank" href="https://wa.me/">+62-belumada</a></li>
@@ -68,9 +68,7 @@
         <!-- <div class="col-md col-sm-7"> -->
           <!-- Map -->
 		  <div class="map">
-          <!--iframe src="https://maps.google.com/maps?width=1170&amp;height=470&amp;hl=en&amp;q=Satlantas%20Medan%20Jl.%20Adinegoro,%20Gaharu,%20Kec.%20Medan%20Timur,%20Kota%20Medan,%20Sumatera%20Utara%20Medan+(Satlantas%20Medan)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-		  -->
-			<iframe src="https://maps.google.com/maps?q=Komplek+Kepatihan%2C+Gedung+Unit+IX+Jl.Malioboro%2C+Suryatmajan%2C+Danurejan%2C+Kota+Yogyakarta%2C+D.I.Yogyakarta+55213&t=&z=13&ie=UTF8&iwloc=&output=embed" scrolling="no" style="width: 100%; height: 450px; border:0;" allowfullscreen="" loading="lazy"></iframe>
+          <iframe src="https://maps.google.com/maps?q=Polrestabes%20Bandung%20Jl.%20Merdeka%20No.18-21%2C%20Babakan%20Ciamis%2C%20Kec.%20Sumur%20Bandung%2C%20Kota%20Bandung%2C%20Jawa%20Barat%2040117&t=&z=14&ie=UTF8&iwloc=B&output=embed" scrolling="no" style="width: 100%; height: 450px; border:0;" allowfullscreen="" loading="lazy"></iframe>
 		  </div>
 		  <!-- End Map -->
         <!-- </div> -->
