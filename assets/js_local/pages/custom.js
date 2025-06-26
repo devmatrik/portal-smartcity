@@ -402,7 +402,7 @@ function initMap() {
 function handleLocationError(browserHasGeolocation, infoWindow) {
 	// Set default location to surakarta, Indonesia
 	//pos = { lat: -7.559669364640486, lng: 110.81963842699129 };
-	pos = { lat: -7.7880249, lng: 110.3596386 };
+	pos = { lat: -6.9143402, lng: 107.6107006 };
 	// center: { lat: -7.559669364640486, lng: 110.81963842699129 },
 	map = new google.maps.Map(document.getElementById("map-warp"), {
 		center: pos,
@@ -414,7 +414,7 @@ function handleLocationError(browserHasGeolocation, infoWindow) {
 	infoWindow.setPosition(pos);
 	infoWindow.setContent(
 		browserHasGeolocation
-			? "Geolocation permissions denied. Using default location. Ditlantas Yogyakarta."
+			? "Geolocation permissions denied. Using default location. Polrestabes Bandung."
 			: "Error: Your browser doesn't support geolocation."
 	);
 	infoWindow.open(map);
