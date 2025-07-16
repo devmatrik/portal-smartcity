@@ -17,8 +17,9 @@
       <div class="row">
           <div class="col-md-12 col-sm-7">
             <div class="Mayor-welcome text-center">
-              <!--img src="../assets/images/LOGO-ELING.png" alt="" style="width: 170px;margin-bottom:5rem"-->
-                <p><img  src="../assets/images/yogya_Page_1.png" style="max-width:100%;"></p>
+              <img src="../assets/images/LOGO-ELING.png" alt="" style="width: 170px;margin-bottom:5rem">
+                <h5>Rute Kereta</h5>
+                <p><img  src="../assets/images/rute-lrt-dan-brt-medan_20170511_200140.jpg"></p>
             </div>
           </div>
           

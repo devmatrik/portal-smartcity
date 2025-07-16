@@ -77,7 +77,7 @@
   <!--Main Content Start-->
   <div class="main-content"> 
     <!--Mayor Msg with Video Start-->
-    <section class="Mayor-video-msg" style="background: url('<?= base_url('assets/portal/');?>img/banner.png');">
+    <section class="Mayor-video-msg" style="background: url('<?= base_url('assets/portal/');?>img/banner.svg');">
       <div class="container">
         <div class="row">
         <?php foreach($banner_vid as $vbn):?>
@@ -85,7 +85,7 @@
             <!--Mayor Msg Start-->
             <div class=" gallery" style="text-align:center;"> 
               <!-- <a href="<?= $vbn->link_vid?>" data-rel="prettyPhoto" title="<?= $vbn->judul?>"-->
-              <img src="<?= base_url('assets/portal/');?>img/banner-sub-img.png" alt=""><!--/a-->
+              <img src="<?= base_url('assets/portal/');?>img/eling-medan.svg" alt=""><!--/a-->
               <!--img src="<?= base_url('data/banner/'.$vbn->thumbnail);?>" alt="" --> 
               <!-- <img src="<?= base_url('assets/images/');?>unsplash_UmV2wr-Vbq8.png" alt="" style="height:293px;width:390px">  -->
             </div>
@@ -107,6 +107,63 @@
     </section>
     <!--Mayor Msg with Video End--> 
 
+    <!--Departments & Information Desk Start-->
+    <section class="wf100 p75-50  depart-info">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="title-style-3">
+              <h3>Departemen & Informasi</h3>
+              <!--p>Baca Berita Terkini dan Artikel tentang Pemerintah </p-->
+            </div>
+            <div class="row" id="dept">
+			<?php $no=0; foreach ($dept as $dep) { $no++?>
+				<div class="col-md-4 col-sm-4" style="margin-bottom:20px;">
+				<a class="rm" href="<?= $dep->lnk;?>">
+				<img src="<?= base_url('assets/portal/img/').$dep->image;?>" alt="">
+				</a>
+					<!--div class="deprt-icon-box"> 
+					<h6> <a href="<?= $dep->lnk;?>"><?= $dep->nama_departemen;?></a> </h6>
+					More</a> </div-->
+				</div>
+			<?php } ?>
+            </div>
+          </div>
+          <div class="col-md-3" style="display:none;">
+            <div class="emergency-info">
+              <h5>Saluran Bantuan & Layanan Darurat </h5>
+              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> 
+                <!--Panel Start-->
+                <?php $no=0; foreach ($yan_rat as $yr) { $no++?>
+                  <div class="panel">
+                    <div class="panel-heading" role="tab" id="heading<?= $no;?>">
+                      <h6> <a role="button" style="padding-right:30px;" data-toggle="collapse" data-parent="#accordion" href="#collapse<?= $no;?>" aria-expanded="true" aria-controls="collapse<?= $no;?>"> <?=$yr->nama_layanan?> </a> </h6>
+                    </div>
+                    <div id="collapse<?= $no;?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?= $no;?>">
+                      <div class="panel-body">
+                        <ul>
+                          <li> <i class="fas fa-phone"></i> <?= $yr->nomor_layanan?></li>
+                          <li> <i class="fas fa-map-marker-alt"></i> <?= $yr->alamat_layanan?></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                <?php }?>
+                <!--Panel End--> 
+              </div>
+            </div>
+            <!-- <a href="#" class="jobs-link">open Vacancies</a>
+            <ul class="reports">
+              <li> <a href="#"><i class="fas fa-file-alt"></i> 2019 Economy Report</a> </li>
+              <li> <a href="#"><i class="fas fa-file-alt"></i> 30 Days Plans of Govt.</a> </li>
+              <li> <a href="#"><i class="fas fa-file-alt"></i> Court Case about TAX</a> </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Departments & Information Desk End--> 
+    
     <!--City News Start-->
     <section class="wf100 city-news p75 bgd_portal" style="background-image: none;">
       <div class="container">
@@ -137,13 +194,53 @@
       </div>
     </section>
     <!--City News End--> 
-	
+    
+    <!--Recent Events Start-->
+    <section class="wf100 p75 recent-events" style="display:none;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <h3>Kegiatan Terkini</h3>
+            <div class="recent-event-block"> 
+              <!--Slider Big Slider Start-->
+              <div class="recent-event-slider" id="eventBig">
+			  <?php $no=0; foreach($events->data as $ev){ $no++; if($no>5) {break; } ?>
+				<div class="event-big">
+                  <div class="event-cap">
+                    <h5><a href="#"><?= $ev->nama_event ?></a></h5>
+                    <!--ul>
+                      <li><i class="fas fa-image"></i></li>
+                    </ul-->
+                    <p style="color:#fff!important;"><?= $ev->isi_konten ?></p>
+                  </div>
+                  <img src="<?= $ev->image ?>" alt=""> 
+				</div>
+			  <?php } ?>
+              </div>
+              <!--Slider Big Slider End--> 
+              <!--Slider Big Slider Nav-->
+              <div class="recent-event-slider-nav" id="eventSmall">
+			  <?php $no=0; foreach($events->data as $ev){ $no++; if($no>5) {break; } ?>
+				<div><img src="<?= $ev->image ?>" alt=""></div>
+			  <?php }?>
+              </div>
+              <!--Slider Big Slider Nav--> 
+            </div>
+          </div>
+          <div class="col-md-7">
+            <h3>Jadwal</h3>
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation" class="active"><a href="#NextEvents" aria-controls="NextEvents" role="tab" data-toggle="tab">Akan Datang</a></li>
+              <li role="presentation"><a href="#NowEvents" aria-controls="NowEvents" role="tab" data-toggle="tab">Sekarang</a></li>
+              <li role="presentation"><a href="#DoneEvents" aria-controls="DoneEvents" role="tab" data-toggle="tab">Yang Lalu</a></li>
+            </ul>
+            <!-- Tab panes -->
 <?php
 $skr=date("Y-m-d");
 $evnow=array();
 $evnex=array();
 $evpas=array();
-foreach($events as $ev){
+foreach($events->data as $ev){
 	$evs=''.
 		'<ul class="event-list">'.
 			'<li><strong class="edate">'.date("j M Y",strtotime($ev->tgl_event)).' - <br />'.date("j M Y",strtotime($ev->tgl_berakhir)).'</strong></li>'.
@@ -164,34 +261,21 @@ foreach($events as $ev){
 	if(count($evpas)>5){ break; }
 }
 ?>
-	
-    <!--Recent Events Start-->
-    <section class="wf100 city-news p75 bgd_portal" style="background-image: none;">
-      <div class="container">
-        <div class="title-style-3">
-          <h3>Events</h3>
-        </div>
-        <div class="row"> 
-          <!--News Box Start-->
-          <?php $no=0; foreach($events as $ev): $no++; if($no>4){break;}?>
-            <div class="col-md-3 col-sm-6">
-              <div class="news-box">
-                <div class="new-thumb"><img src="<?= $ev->image;?>" alt=""> </div>
-                <div class="new-txt">
-                  <ul class="news-meta">
-                    <li><?= date("j M Y",strtotime($ev->tgl_event)).' - '.date("j M Y",strtotime($ev->tgl_berakhir))?></li>
-                    <!-- <li>176 Comments</li> -->
-                  </ul>
-                  <h6><a href="<?= base_url('Portal/eventSingle/').$ev->rowid?>"><?= $ev->nama_event ?></a></h6>
-                </div>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane active" id="NextEvents"> 
+				<?php echo implode("",$evnex)?>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="NowEvents">
+				<?php echo implode("",$evnow)?>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="DoneEvents">
+				<?php echo implode("",$evpas)?>
               </div>
             </div>
-          <?php endforeach;?>
-          <!--News Box End-->
+          </div>
         </div>
       </div>
     </section>
-    <!--City News End--> 
     <!--Recent Events End--> 
     <section class="wf100 home3 emergency-numbers" style="display:none;">
       <div class="container">

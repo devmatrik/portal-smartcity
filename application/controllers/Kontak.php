@@ -12,7 +12,7 @@ class Kontak extends CI_Controller {
 	public function index()
 	{
 		$data = [
-			'title' => 'Portal Smart City Yogyakarta - Kontak',
+			'title' => 'Portal Smart City Medan - Kontak',
 			'link' => 'kontak',
 			'js' => [
                 //base_url('assets/js_local/pages/e_lapor.js'),

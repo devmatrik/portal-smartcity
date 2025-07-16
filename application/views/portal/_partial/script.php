@@ -46,8 +46,6 @@
     var monthNames = [ "Januari", "Februari", "Maret", "April", "Mei", "Juni", "July", "Agustus", "September", "Oktober", "November", "Desember" ]; 
     var dayNames= ["Minggu","Senin","Selasa","Rabu","Kamis","Jum'at","Sabtu"]
     $(document).ready(function () {
-		
-		$(".subheader").removeAttr("style").attr("style","background: url('<?php echo base_url('assets/portal')?>/img/hero-sub.png') no-repeat center !important;");
         // tags();
     // Create a newDate() object
     var newDate = new Date();

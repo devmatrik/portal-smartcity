@@ -3,8 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MApi extends CI_Model {
 	//private $url = "https://backend.elingbali.com:8082/api/v.0.1/sm_portal/";
-	//private $url = "https://be.elingmedan.com:8082/api/v.0.1/";
-	private $url = "https://backend.elingjogja.com:8082/api/v.0.1/";
+	private $url = "https://be.elingmedan.com:8082/api/v.0.1/";
 	private $token = "5b3dac76aaee24d14185cbc3d010fd20";
 	
 	public function post($url,$param){
@@ -20,8 +19,6 @@ class MApi extends CI_Model {
 				),
 			)
 		);
-		curl_setopt ($curl, CURLOPT_SSL_VERIFYHOST, 0);
-		curl_setopt ($curl, CURLOPT_SSL_VERIFYPEER, 0); 
 
 		$response = curl_exec($curl);
 		$err = curl_error($curl);
@@ -40,8 +37,6 @@ class MApi extends CI_Model {
 				),
 			)
 		);
-		curl_setopt ($curl, CURLOPT_SSL_VERIFYHOST, 0);
-		curl_setopt ($curl, CURLOPT_SSL_VERIFYPEER, 0); 
 
 		$response = curl_exec($curl);
 		$err = curl_error($curl);
@@ -62,8 +57,6 @@ class MApi extends CI_Model {
 				),
 			)
 		);
-		curl_setopt ($curl, CURLOPT_SSL_VERIFYHOST, 0);
-		curl_setopt ($curl, CURLOPT_SSL_VERIFYPEER, 0); 
 
 		$response = curl_exec($curl);
 		$err = curl_error($curl);
@@ -82,8 +75,6 @@ class MApi extends CI_Model {
 				),
 			)
 		);
-		curl_setopt ($curl, CURLOPT_SSL_VERIFYHOST, 0);
-		curl_setopt ($curl, CURLOPT_SSL_VERIFYPEER, 0); 
 
 		$response = curl_exec($curl);
 		$err = curl_error($curl);

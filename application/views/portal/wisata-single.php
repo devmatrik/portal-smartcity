@@ -11,7 +11,7 @@
 <!--Subheader End--> 
 <div class="main-content p80">
   <div class="container">
-    <div class="card" style="">
+    <div class="card" style="box-shadow: 0 0 5px;">
       <div class="card-body">
         <!-- <h5 class="card-title">Card title</h5> -->
         <div class="owl-carousel owl-theme" style="display:inline;">

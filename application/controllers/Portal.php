@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Portal extends CI_Controller {
 
-	private $title = "Portal Smart City Yogya";
+	private $title = "Portal Smart City Medan";
 
 	public function __construct()
 	{
@@ -34,23 +34,21 @@ class Portal extends CI_Controller {
 		
 		 //echo json_encode($ar);die();
 		 //print_r(json_decode($ev[1])); die();
-		$evx=json_decode($ev[1]);
-		$evtx=isset($evx->data)?$evx->data:array();
-		
+		 
 		$data = [
 			'title' => $this->title,
-			'events' => $evtx,
+			'events' => json_decode($ev[1]),
 			'artikel' => $artix,
 			'dept' => array(
-					(object)array("image"=>"icon-opsdal.png","nama_departemen"=>"Opsdal","lnk"=>base_url("Portal/detailDept/1")),
-					(object)array("image"=>"icon-media.png","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/2")),
-					(object)array("image"=>"icon-dacol.png","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/3")),
-					(object)array("image"=>"icon-patroli-cctv.png","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/4")),
-					(object)array("image"=>"icon-public-service.png","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/5")),
-					(object)array("image"=>"icon-it-aset.png","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/6"))),
-			'banner' => array((object)array("image"=>'hero.png',"title"=>'',"subtitle"=>'')),
-			'banner_vid' => array((object)array("link_vid"=>'',"thumbnail"=>'banner-sub-img.png',"judul"=>'Yogya Smart City',
-			"deskripsi"=>'Yogya Smart City dengan pendekatan Road Safety Policing adalah model dan cara serta alat untuk mendukung terwujudnya kondisi kota yang aman, selamat, tertib, dan lancar dengan melakukan kolaborasi antara Kepolisian dan Pemerintah Kota Yogya',
+					(object)array("image"=>"icon-opsdal.svg","nama_departemen"=>"Opsdal","lnk"=>base_url("Portal/detailDept/1")),
+					(object)array("image"=>"icon-media.svg","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/2")),
+					(object)array("image"=>"icon-dacol.svg","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/3")),
+					(object)array("image"=>"icon-patroli-cctv.svg","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/4")),
+					(object)array("image"=>"icon-public-service.svg","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/5")),
+					(object)array("image"=>"icon-it-aset.svg","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/6"))),
+			'banner' => array((object)array("image"=>'hero.svg',"title"=>'',"subtitle"=>'')),
+			'banner_vid' => array((object)array("link_vid"=>'',"thumbnail"=>'PP-removebg-preview.png',"judul"=>'Medan Smart City',
+			"deskripsi"=>'Medan Smart City dengan pendekatan Road Safety Policing adalah model dan cara serta alat untuk mendukung terwujudnya kondisi kota yang aman, selamat, tertib, dan lancar dengan melakukan kolaborasi antara Kepolisian dan Pemerintah Kota Medan',
 			"nama"=>'Electronic Policing',"tag"=>'Sistem Pemolisian berbasis elektronik')),
 			'yan_rat' => array((object)array("nama_layanan"=>"Pemadam Kebakaran","nomor_layanan"=>"113","alamat_layanan"=>""),
 					(object)array("nama_layanan"=>"Polisi","nomor_layanan"=>"110","alamat_layanan"=>""),
@@ -190,7 +188,7 @@ class Portal extends CI_Controller {
 			'title' => $this->title,
 			'link' =>  'event',
 			'js' => [
-                //base_url('assets/js_local/pages/event.js'),
+                base_url('assets/js_local/pages/event.js'),
                 base_url('assets/js_local/pages/event-singel.js'),
 			],
 		];
@@ -201,20 +199,6 @@ class Portal extends CI_Controller {
 		$data = [
 			'title' => $this->title,
 			'link' =>  'about',
-			'dept' => array(
-					(object)array("image"=>"menu-opsdal.png","nama_departemen"=>"Opsdal","lnk"=>base_url("Portal/detailDept/1")),
-					(object)array("image"=>"menu-media.png","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/2")),
-					(object)array("image"=>"menu-datacollecting.png","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/3")),
-					(object)array("image"=>"menu-patrolicctv.png","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/4")),
-					(object)array("image"=>"menu-publicservice.png","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/5")),
-					(object)array("image"=>"menu-itasset.png","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/6"))),
-			'banner' => array((object)array("image"=>'hero.png',"title"=>'',"subtitle"=>'')),
-			'banner_vid' => array((object)array("link_vid"=>'',"thumbnail"=>'PP-removebg-preview.png',"judul"=>'Yogya Smart City',
-			"deskripsi"=>'Yogya Smart City dengan pendekatan Road Safety Policing adalah model dan cara serta alat untuk mendukung terwujudnya kondisi kota yang aman, selamat, tertib, dan lancar dengan melakukan kolaborasi antara Kepolisian dan Pemerintah Kota Yogya',
-			"nama"=>'Electronic Policing',"tag"=>'Sistem Pemolisian berbasis elektronik')),
-			'yan_rat' => array((object)array("nama_layanan"=>"Pemadam Kebakaran","nomor_layanan"=>"113","alamat_layanan"=>""),
-					(object)array("nama_layanan"=>"Polisi","nomor_layanan"=>"110","alamat_layanan"=>""),
-					(object)array("nama_layanan"=>"PLN","nomor_layanan"=>"123","alamat_layanan"=>"")),
 			'js' => [
                 //base_url('assets/js_local/pages/about.js'),
 			],
@@ -283,17 +267,17 @@ class Portal extends CI_Controller {
 	private function getDept($id){
 		$ret=(object)array("nama_departemen"=>"","image"=>"","deskripsi_dept"=>"");
 		switch($id){
-			case 1: $ret=(object)array("nama_departemen"=>"Operasi dan Pengendalian","image"=>"menu-opsdal.png","deskripsi_dept"=>"Divisi yang bertugas sebagai operasi dan pengendali dari kegiatan, proses laporan masyarakat yang akan diproses menggunakan dengan standart operasional yang ada"); 
+			case 1: $ret=(object)array("nama_departemen"=>"Operasi dan Pengendalian","image"=>"icon-opsdal.svg","deskripsi_dept"=>"Divisi yang bertugas sebagai operasi dan pengendali dari kegiatan, proses laporan masyarakat yang akan diproses menggunakan dengan standart operasional yang ada"); 
 					break;
-			case 2: $ret=(object)array("nama_departemen"=>"Media Management","image"=>"menu-media.png","deskripsi_dept"=>"Divisi yang bertugas untuk memantau, memposting, dan interaksi dengan media sosial, baik itu twitter, facebook, instagram, tiktok ataupun youtube"); 
+			case 2: $ret=(object)array("nama_departemen"=>"Media Management","image"=>"icon-media.svg","deskripsi_dept"=>"Divisi yang bertugas untuk memantau, memposting, dan interaksi dengan media sosial, baik itu twitter, facebook, instagram, tiktok ataupun youtube"); 
 					break;
-			case 3: $ret=(object)array("nama_departemen"=>"Data Collecting","image"=>"menu-datacollecting.png","deskripsi_dept"=>"Divisi yang bertugas untuk mengumpulkan semua data-data yang diperlukan divisi lain, dan juga untuk kebutuhan algoritma."); 
+			case 3: $ret=(object)array("nama_departemen"=>"Data Collecting","image"=>"icon-dacol.svg","deskripsi_dept"=>"Divisi yang bertugas untuk mengumpulkan semua data-data yang diperlukan divisi lain, dan juga untuk kebutuhan algoritma."); 
 					break;
-			case 4: $ret=(object)array("nama_departemen"=>"Patroli CCTV","image"=>"menu-patrolicctv.png","deskripsi_dept"=>"Divisi yang bertugas untuk memantau kondisi lalu lintas, termasuk didalamnya kejadian seperti kemacetan, kecelakaan, pelanggaran, kegiatan yang bisa terpantau oleh kamera"); 
+			case 4: $ret=(object)array("nama_departemen"=>"Patroli CCTV","image"=>"icon-patroli-cctv.svg","deskripsi_dept"=>"Divisi yang bertugas untuk memantau kondisi lalu lintas, termasuk didalamnya kejadian seperti kemacetan, kecelakaan, pelanggaran, kegiatan yang bisa terpantau oleh kamera"); 
 					break;
-			case 5: $ret=(object)array("nama_departemen"=>"Public Service","image"=>"menu-publicservice.png","deskripsi_dept"=>"Divisi yang bertugas untuk menerima, berinteraksi, dan memonitor laporan masuk dari masyarakat, baik itu melalui aplikasi, media sosial, maupun dari telephone");  
+			case 5: $ret=(object)array("nama_departemen"=>"Public Service","image"=>"icon-public-service.svg","deskripsi_dept"=>"Divisi yang bertugas untuk menerima, berinteraksi, dan memonitor laporan masuk dari masyarakat, baik itu melalui aplikasi, media sosial, maupun dari telephone");  
 					break;
-			case 6: $ret=(object)array("nama_departemen"=>"IT and Asset Management","image"=>"menu-itasset.png","deskripsi_dept"=>"Divisi yang bertugas untuk memonitor perangkat hardware dan juga jaringan"); 
+			case 6: $ret=(object)array("nama_departemen"=>"IT and Asset Management","image"=>"icon-it-aset.svg","deskripsi_dept"=>"Divisi yang bertugas untuk memonitor perangkat hardware dan juga jaringan"); 
 					break;
 		}
 		return array($ret);
