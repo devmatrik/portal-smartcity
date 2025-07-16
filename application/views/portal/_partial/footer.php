@@ -1,12 +1,12 @@
-<footer class="home3 main-footer wf100" style="background: url('<?= base_url('assets/portal/');?>img/footer.svg') no-repeat; background-size: cover;">
+<footer class="home3 main-footer wf100" style="background: url('<?= base_url('assets/portal/');?>img/footer.png') no-repeat; background-size: cover;">
     <div class="container">
       <div class="row"> 
         <!--Footer Widget Start-->
         <div class="col-md-3 col-sm-6" style="margin-right: 15rem;">
-          <div class="textwidget"> <img src="<?= base_url('assets/portal/');?>img/logo-eling-bdg-footer.svg" style="width:200px;" alt="">
+          <div class="textwidget"> <img src="<?= base_url('assets/portal/');?>img/logofoot.png" style="width:200px;" alt="">
             <address>
             <ul>
-              <li>Electronic Policing Smart City Bandung</li>
+              <li>Electronic Policing Smart Province Yogyakarta</li>
             </ul>
             </address>
           </div>
@@ -18,19 +18,19 @@
             <div class="row">
               <div class="col-md-12">
                 <span style="font-size: 25px;color: white;">Alamat</span><br>
-                <a href="#" style="color: white;">Jl. Merdeka No.18-21, Babakan Ciamis, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40117</a>
+                <a href="#" style="color: white;">Komplek Kepatihan, Gedung Abimanyu Lantai 3 Unit IX, Jl.Malioboro, Suryatmajan, Danurejan, Kota Yogyakarta, D.I.Yogyakarta 55213</a>
               </div>
             </div>
             <div class="row" style="margin-top:20px">
               <div class="col-md-12">
                 <span style="font-size: 25px;color: white;">Email</span><br>
-                <a href="#" style="color: white">belum ada</a>
+                <a href="#" style="color: white">elingjogja23@gmail.com</a>
               </div>
             </div>
             <div class="row" style="margin-top:20px;display:none;">
               <div class="col-md-12">
                 <span style="font-size: 25px;color: white;">Call Center</span><br>
-              <a href="whatsapp://send?text=Halo&phone=" style="color: white;">belum ada</a>
+              <a href="whatsapp://send?text=Halo&phone=" style="color: white;">+62 123-456-789</a>
               </div>
             </div>
           </div>
@@ -68,13 +68,13 @@
     <div class="container">
       <div class="row">
         <div class="col-md-7 col-sm-7">
-          <p class="copyr" style="color: white !important;">Copy Rights © 2025, By: <a href="#">Eling Bandung Developer</a></p>
+          <p class="copyr" style="color: white !important;">Copy Rights © 2024, By: <a href="#">Eling Yogyakarta Developer</a></p>
         </div>
         <div class="col-md-5 col-sm-5">
           <ul class="footer-social">
             <li><a href="https://www.facebook.com/" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a></li>
             <li><a href="https://twitter.com/" target="_blank" class="tw"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/polrestabesbandung/" target="_blank" class="insta"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" class="insta"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
       </div>

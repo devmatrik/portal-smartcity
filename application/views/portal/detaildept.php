@@ -1,4 +1,4 @@
-         <section class="wf100 subheader" style="background: url('<?php echo base_url('assets/portal')?>/img/hero-submenu.svg') no-repeat !important; background-size: cover !important;">
+         <section class="wf100 subheader" style="background: url('<?php echo base_url('assets/portal')?>/img/hero-sub.png') no-repeat !important;">
             <div class="container">
                <h2>Departemen <?= $dept[0]->nama_departemen?></h2>
                <ul>

@@ -2,7 +2,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Portal Smart City Bandung</title>
+    <title>Portal Smart City Yogyakarta</title>
     <!-- CSS Files -->
     <link href="<?= base_url('assets/portal/');?>css/custom.css" rel="stylesheet">
     <link href="<?= base_url('assets/portal/');?>css/responsive.css" rel="stylesheet">
@@ -13,7 +13,7 @@
     <link href="<?= base_url('assets/portal/');?>css/prettyPhoto.css" rel="stylesheet">
     <link href="<?= base_url('assets/portal/');?>css/slick.css" rel="stylesheet">
     <link href="<?= base_url('assets/portal/');?>css/owl.theme.default.min.css">
-    <link rel="icon" href="<?= base_url('assets/portal/');?>img/iconelingbandung-2.png">
+    <link rel="icon" href="<?= base_url('assets/portal/');?>img/iconeling.png">
     <!-- custom css -->
     <link href="<?= base_url('assets/');?>css/custom-about.css" rel="stylesheet">
     <link href="<?= base_url('assets/');?>css/custom-maps.css" rel="stylesheet">
