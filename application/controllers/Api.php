@@ -275,21 +275,20 @@ class Api extends CI_Controller
                     if ($this->cek_token()) {
                         $id = $this->input->post('id');
                         $limit = $this->input->post('limit');
-			$limit=empty($limit)?"":$limit;
                         $status = $this->input->post('status');
                         if (!empty($id)) {
-                        	$q = $this->me->get($id)->row();
-                        }elseif(!empty($status)){
-                            if ($status == 1) {
-                                $q = $this->me->get('',[ 'tgl_start >' => date('Y-m-d')],'',$limit)->result();
-                            }else if($status == 2){
-                                $q = $this->me->get('',[ 'tgl_start <=' => date('Y-m-d'), 'tgl_end >=' => date('Y-m-d')],'',$limit)->result();
-                            }else if ($status == 3) {
-                                $q = $this->me->get('',[ 'tgl_end <' => date('Y-m-d')],'',$limit)->result();
-                            }
+                        $q = $this->me->get($id)->row();
                         }elseif(!empty($limit)){
                             $q = $this->me->get('',['status' => 1],'',$limit)->result();
-			}else{
+                        }elseif(!empty($status)){
+                            if ($status == 1) {
+                                $q = $this->me->get('',['status' => 1, 'tgl_start >' => date('Y-m-d')])->result();
+                            }else if($status == 2){
+                                $q = $this->me->get('',['status' => 2, 'tgl_start =' => date('Y-m-d')])->result();
+                            }else if ($status == 3) {
+                                $q = $this->me->get('',['status' => 3, 'tgl_start <' => date('Y-m-d')])->result();
+                            }
+                        }else{
                             $q = $this->me->get()->result();
                         }
 

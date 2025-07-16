@@ -34,8 +34,8 @@
 		<script src="<?= base_url(); ?>assets/plugins/peitychart/jquery.peity.min.js"></script>
 		<script src="<?= base_url(); ?>assets/plugins/peitychart/peitychart.init.js"></script>
 
-		<!-- Index js-->
-		<script src="<?= base_url(); ?>assets/js/index1.js"></script>
+		<!-- Index js--
+		<script src="<?= base_url(); ?>assets/js/index1.js"></script-->
 
 		<!-- Apexchart js-->
 		<script src="<?= base_url(); ?>assets/js/apexcharts.js"></script>
@@ -51,6 +51,10 @@
 
 		<!--Select2 js -->
 		<script src="<?=base_url();?>assets/plugins/select2/select2.full.min.js"></script>
+		
+		<!-- Add fancyBox -->
+		<link rel="stylesheet" href="<?=base_url();?>assets/plugins/jquery-fancybox/jquery.fancybox.min.css" type="text/css" media="screen" />
+		<script type="text/javascript" src="<?=base_url();?>assets/plugins/jquery-fancybox/jquery.fancybox.min.js"></script>
 
 		<script src="<?=base_url();?>assets/plugins/jquery-fancybox/jquery.fancybox.min.js"></script>
 
@@ -184,6 +188,3 @@
 			}
 		</script>
 
-
-	</body>
-</html>

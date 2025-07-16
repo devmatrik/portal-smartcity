@@ -1,62 +1,303 @@
+		<!-- Start Preloader -->
+        <div class="preloader">
+            <div class="loader">
+                <div class="wrapper">
+                    <div class="circle circle-1"></div>
+                    <div class="circle circle-1a"></div>
+                    <div class="circle circle-2"></div>
+                    <div class="circle circle-3"></div>
+                </div>
+                <span>Loading...</span>
+            </div>
+        </div>
+        <!-- End Preloader -->
 
-          <header class="wf100 header">
-            <div class="topbar" style="background-color: black;">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-6 col-sm-6">
-                        <ul class="left-links">
-                           <!-- <li> <a href="#">Council</a> </li>
-                           <li> <a href="#">Vacancies</a> </li>
-                           <li> <a href="#">Report It</a> </li>
-                           <li> <a href="#">A-Z Index</a> </li>
-                          <li> <a href="#">A-Z Index</a> </li> -->
+        <!-- Start Top Header Area -->
+        <div class="top-header-area">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <!--ul class="top-header-social">
+                            <li>
+                                <i class='bx bx-calendar'></i>
+                                <a href="#">Call Center :<strong> 111</strong></a>
+                            </li>
+                        </ul-->
+                    </div>
+
+                    <div class="col-lg-6">
+                        <ul class="top-header-others">
+
+                            <li>
+                                <i class='bx bx-calendar'></i>
+                                <a href="#"><span id="Date"></span> | <span id="jam"></span>:<span id="min"></span>:<span id="sec"></span></a>
+                            </li>
                         </ul>
-                     </div>
-                     <div class="col-md-6 col-sm-6">
-                        <ul class="right-links">
-                          <li> <a href="#">Call Center: <strong>110</strong></a> </li>
-                           <li> <a href="#"><span id="Date"></span>, <strong id="hours"></strong> : <strong id="min"></strong> : <strong id="sec"></strong></a> </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-            <div class="logo-nav-row">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
-                        <nav class="navbar">
-                           <div class="navbar-header">
-                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                              <a class="navbar-brand" href="<?=base_url()?>"><img src="<?= base_url('assets/portal/img/logoeling.png')?>" style="width:152px; height:52px" alt=""></a> 
-                           </div>
-                           <!-- Collect the nav links, forms, and other content for toggling -->
-                           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li> <a href="<?=base_url()?>">Beranda</a></li>
-                                <li> <a href="<?=base_url('Portal/tentang')?>">Tentang</a></li>
-                                <li> <a href="<?=base_url('Portal/wisata')?>">Wisata</a></li>
-                                <li> <a href="<?=base_url('Portal/berita')?>">Berita</a></li>
-                                <li> <a href="<?=base_url('Portal/event')?>">Event</a></li>
-                                <!--li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Layanan <span class="caret"></span></a>
-                                  <ul class="dropdown-menu">
-                                    <li><a href="<?=base_url('Lapor/lapor')?>">E-Lapor</a></li>
-                                    <li><a href="<?=base_url('Lapor/service')?>">E-Service</a></li>
-                                  </ul>
+        </div>
+        <!-- End Top Header Area -->
+
+        <!-- Start Navbar Area -->
+        <div class="navbar-area">
+            <div class="main-responsive-nav">
+                <div class="container">
+                    <div class="main-responsive-menu">
+                        <div class="logo">
+                            <a href="<?= base_url()?>">
+                                <img src="<?= base_url("bali/")?>assets/img/logo-elingbali-70.png" class="black-logo" alt="image">
+                                <img src="<?= base_url("bali/")?>assets/img/logo-elingbali-70.png" class="white-logo" alt="image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-navbar">
+                <div class="container">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <a class="navbar-brand" href="<?= base_url();?>">
+                            <img src="<?= base_url("bali/")?>assets/img/logo-elingbali-70.png" class="black-logo" alt="image">
+                            <img src="<?= base_url("bali/")?>assets/img/logo-elingbali-70.png" class="white-logo" alt="image">
+                        </a>
+
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a href="<?= base_url();?>" class="nav-link <?php echo ($link=='index')?"active":"";?>">
+                                        Home 
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link  <?php echo ($link=='wisata'||$link=='wisata-single')?"active":"";?>">
+                                        Wisata 
+                                        <i class='bx bx-chevron-down'></i>
+                                    </a>
+									<ul class="dropdown-menu">
+                                        <li class="nav-item ">
+                                            <a href="<?= base_url("portal/wisata/?k=2");?>" class="nav-link">
+                                                Wisata Alam
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?= base_url("portal/wisata/?k=3");?>" class="nav-link">
+                                                Wisata Kuliner
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?= base_url("portal/wisata/?k=1");?>" class="nav-link">
+                                                Kuliner Tradisional
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?= base_url("portal/wisata/?k=4");?>" class="nav-link">
+                                                Adat & Budaya
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?= base_url("portal/wisata/?k=5");?>" class="nav-link">
+                                                Tempat Rekreasi
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?= base_url("portal/wisata/?k=6");?>" class="nav-link">
+                                                Oleh - Oleh Khas
+                                            </a>
+                                        </li>
+										
+										<li class="nav-item">
+                                            <a href="<?= base_url("portal/wisata/?k=7");?>" class="nav-link">
+                                                Penginapan
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <!--li class="nav-item">
+                                    <a href="#" class="nav-link <?php echo ($link=='e_lapor'||$link=='e_service')?"active":"";?>">
+                                        Public Service 
+                                        <i class='bx bx-chevron-down'></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        
+                                        <li class="nav-item">
+                                            <a href="penginapan.html" class="nav-link">
+                                                Penginapan
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="travel-agensi.html" class="nav-link">
+                                                Travel Agensi
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="pelayanan-publik.html" class="nav-link">
+                                                Lokasi Pelayanan Publik
+                                            </a>
+                                        </li>
+
+                                        <hr style="background-color: #a0a0a0;">
+
+                                        <li class="nav-item">
+                                            <a href="<?= base_url("lapor/lapor");?>" class="nav-link <?php echo ($link=='e_lapor')?"active":"";?>">
+                                                E-Lapor
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="<?= base_url("lapor/service");?>" class="nav-link <?php echo ($link=='e_service')?"active":"";?>">
+                                                E-Service
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li-->
-								<li> <a href="<?=base_url('Portal/publictrans')?>">Rute Transportasi</a></li>
-                                <li> <a href="<?=base_url('Portal/maps')?>">Eksplorasi Kota</a></li>
-                                <li> <a href="<?=base_url('Kontak')?>">Kontak</a></li>
-								<!--li> <a target="_blank" href="https://sm.elingmedan.com/">Login <i class="fa fa-sign-in-alt"></i></a></li-->
-                              </ul>
-                              <ul class="nav navbar-nav navbar-right">
-                                 <!-- <li class="search-btn"><a class="search-icon" href="#search"> <i class="fas fa-search"></i> </a></li>
-                                 <li class="bars-btn"><a href="#"><img src="images/bars.png" alt=""></a></li> -->
-                              </ul>
-                           </div>
-                        </nav>
-                     </div>
-                  </div>
-               </div>
+
+                                <li class="nav-item">
+                                    <a href="<?= base_url("portal/event");?>" class="nav-link <?php echo ($link=='event'||$link=='event-single')?"active":"";?>">
+                                        Event
+                                    </a>
+                                </li>
+
+                                <!--li class="nav-item">
+                                    <a href="<?= base_url("kontak/trafic");?>" class="nav-link <?php echo ($link=='trafic')?"active":"";?>">
+                                        Traffic
+                                    </a>
+                                </li-->
+                                
+                                <li class="nav-item">
+                                    <a href="<?= base_url("portal/berita");?>" class="nav-link <?php echo ($link=='berita')?"active":"";?>">
+                                        News
+                                    </a>
+                                </li>
+								
+								<li class="nav-item">
+                                    <a href="<?= base_url("portal/galeri");?>" class="nav-link <?php echo ($link=='galeri')?"active":"";?>">
+                                        Gallery
+                                    </a>
+                                </li>
+
+                                <!--li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Infographic
+                                        <i class='bx bx-chevron-down'></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="weekly-report.html" class="nav-link">
+                                                Weekly Traffic Report
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="monthly-report.html" class="nav-link">
+                                                Monthly Traffic Report
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li-->
+
+                                <!--li class="nav-item">
+                                    <a href="#" class="nav-link <?php echo ($link=='galeri'||$link=='pidio')?"active":"";?>">
+                                        Gallery
+                                        <i class='bx bx-chevron-down'></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="<?= base_url("kontak/galeri");?>" class="nav-link <?php echo ($link=='galeri')?"active":"";?>">
+                                                Photo
+                                            </a>
+                                        </li>
+										<li class="nav-item">
+                                            <a href="<?= base_url("kontak/pidio");?>" class="nav-link <?php echo ($link=='pidio')?"active":"";?>">
+                                                Video
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li-->
+								
+								<li class="nav-item">
+                                    <a href="<?= base_url("kontak/transport");?>" class="nav-link <?php echo ($link=='transport')?"active":"";?>">
+                                        Transportation Route 
+                                    </a>
+                                </li>
+								<!--li class="nav-item">
+                                    <a href="<?= base_url("portal/maps");?>" class="nav-link <?php echo ($link=='maps')?"active":"";?>">
+                                        Public Services 
+                                    </a>
+                                </li>
+								
+                                <li class="nav-item">
+                                    <a href="<?= base_url("portal/perda");?>" class="nav-link <?php echo ($link=='perda')?"active":"";?>">
+                                        Perda
+                                    </a>
+                                </li-->
+								
+								<li class="nav-item">
+                                    <a href="<?= base_url("kontak");?>" class="nav-link <?php echo ($link=='kontak')?"active":"";?>">
+                                        Contact
+                                    </a>
+                                </li>
+								
+								<!--li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        Download
+                                        <i class='bx bx-chevron-down'></i>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            
+                                            <a href="#" class="nav-link">
+                                             Peraturan Daerah
+                                            </a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                             Perundang- Undangan
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li-->
+                            </ul>
+
+                            <!-- s -->
+                        </div>
+                    </nav>
+                </div>
             </div>
-         </header>
+
+            <div class="others-option-for-responsive" style="display:none;">
+                <div class="container">
+                    <div class="dot-menu">
+                        <div class="inner">
+                            <div class="circle circle-one"></div>
+                            <div class="circle circle-two"></div>
+                            <div class="circle circle-three"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="container">
+                        <div class="option-inner">
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <form class="search-box">
+                                        <input type="text" class="form-control" placeholder="Search for..">
+                                        <button type="submit"><i class='bx bx-search'></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Navbar Area -->

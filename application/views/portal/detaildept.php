@@ -1,9 +1,9 @@
-         <section class="wf100 subheader" style="background: url('<?php echo base_url('assets/portal')?>/img/hero-sub.png') no-repeat !important;">
+         <section class="wf100 subheader">
             <div class="container">
                <h2>Departemen <?= $dept[0]->nama_departemen?></h2>
                <ul>
                   <li> <a href="<?= base_url()?>">Beranda</a> </li>
-                  <li>Departemen</li>
+                  <li> <a href="<?= base_url('Portal/dept')?>">Departemen</a> </li>
                </ul>
             </div>
          </section>
@@ -21,7 +21,7 @@
                            <div class="widget" style="margin-bottom:20px;">
                            <!-- <h4>About us</h4> -->
                               <div class="about-widget inner">
-                                 <img src="<?=base_url('assets/portal/img/').$dept[0]->image?>" alt="">
+                                 <img src="<?=base_url('./data/dept/').$dept[0]->image?>" alt="">
                               </div>
                            </div>
                            <!--Widget End-->
@@ -38,7 +38,7 @@
                         <hr>
                         <!--Department Details Txt End--> 
                         <!--Related Departments Start-->
-                        <div class="other-department wf100" style="display:none;">
+                        <div class="other-department wf100">
                            <h3>Berita Terkait</h3>
                            <div class="row">
                            <?php foreach($artikel as $ar):?>

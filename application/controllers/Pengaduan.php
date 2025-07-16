@@ -185,4 +185,46 @@ class Pengaduan extends CI_Controller {
 
             return [$s,$d,$msg,$this->upload->data(),$config];
     } 
+	
+	public function notify(){
+		$rs=$this->mp->notify();
+		$data=array();
+		foreach($rs as $row){
+			$r=array();
+			$r[]=$row->nama; $r[]=$this->kata($row->dur); $r[]=$row->id;
+			$data[]=$r;
+		}
+		
+		echo json_encode($data);
+	}
+	public function isi($id=0){
+		$rs=$this->mp->isi($id);
+		echo $rs[0]->aduan;
+	}
+	private function kata($sec){
+		//$sec=3477;
+		$day=floor($sec/(3600*24));
+		$sec-=($day*3600*24);
+		$hour=floor($sec/3600);
+		$sec-=($hour*3600);
+		$min=floor($sec/60);
+		$sec-=($min*60);
+
+		$ada=false;
+		$return="";
+
+		if($day>0){
+			$return=$day." days ";
+		}
+		if($hour>0){
+			$return=$return==""?$hour." hours ":$return;
+		}
+		if($min>=0){
+			$return=$return==""?$min." minutes ":$return;
+		}
+		if($sec>0){
+			$return=$return==""?$sec." seconds ":$return;
+		}
+		return $return." ago";
+	}
 }

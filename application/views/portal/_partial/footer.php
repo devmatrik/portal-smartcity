@@ -1,83 +1,109 @@
-<footer class="home3 main-footer wf100" style="background: url('<?= base_url('assets/portal/');?>img/footer.png') no-repeat; background-size: cover;">
-    <div class="container">
-      <div class="row"> 
-        <!--Footer Widget Start-->
-        <div class="col-md-3 col-sm-6" style="margin-right: 15rem;">
-          <div class="textwidget"> <img src="<?= base_url('assets/portal/');?>img/logoeling.png" style="width:200px;" alt="">
-            <address>
-            <ul>
-              <li>Electronic Policing Smart City Medan</li>
-            </ul>
-            </address>
-          </div>
-        </div>
-        <!--Footer Widget End--> 
-        <!--Footer Widget Start-->
-        <div class="col-md-3 col-sm-6" style="margin-right: 2rem;">
-          <div class="footer-widget">
-            <div class="row">
-              <div class="col-md-12">
-                <span style="font-size: 25px;color: white;">Alamat</span><br>
-                <a href="#" style="color: white;">TMC Medan</a>
-              </div>
+		<!-- Start Footer Area -->
+        <section class="footer-area pt-100 pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4">
+                        <div class="single-footer-widget">
+                            <a href="#">
+                                <img src="<?= base_url('bali/')?>assets/img/logo korlantas baru.png" style="width: 150px;" alt="image">
+                            </a>
+
+                            <ul class="social">
+                                <p>Find us on social media :</p>
+                                <li>
+                                    <a href="https://web.facebook.com/bali.smartcity" class="facebook" target="_blank">
+                                        <i class='bx bxl-facebook'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.instagram.com/smartcity.bali?igsh=OW44YXlkNjF5OW" class="instagram" target="_blank">
+                                        <i class='bx bxl-instagram'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://x.com/eling_bali" class="twitter" target="_blank">
+                                        <i class='bx bxl-twitter'></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://www.tiktok.com/@smartcitybali?_t=8sJDP28A7g9&_r=1" class="tiktok" target="_blank">
+                                        <i class='bx bxl-tiktok'></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="col-lg-4 col-md-4">
+                        <div class="single-footer-widget">
+                            <h2>Smart City Ditlantas Polda Bali</h2>
+
+                            <ul class="useful-links-list">
+                                <li>
+                                    <a href="#">Smart Emergency</a>
+                                </li>
+                                <li>
+                                    <a href="#">Smart Management</a>
+                                </li>
+                                <li>
+                                    <a href="#">Smart Meeting</a>
+                                </li>
+                                <li>
+                                    <a href="#">Smart Room</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4">
+                        <div class="single-footer-widget">
+                            <h2>Contact Us</h2>
+
+                            <ul class="useful-links-list">
+                                <li>
+                                    <a href="#"><i class="bx bx-envelope"></i>  Email : smartcitybali@gmail.com</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="bx bx-phone-call"></i> Call Center : +62 813-3735-6353</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="bx bx-map"></i></a><br><a>Jl. WR Supratman No.6, Dangin Puri Kangin, Kec. Denpasar Utara, Kota Denpasar, Bali 80236</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row" style="margin-top:20px">
-              <div class="col-md-12">
-                <span style="font-size: 25px;color: white;">Email</span><br>
-                <a href="mailto:officialelengsolo@gmail.com" style="color: white">elingmedan@gmail.com</a>
-              </div>
+        </section>
+        <!-- End Footer Area -->
+
+        <!-- Start Copy Right Area -->
+        <div class="copyright-area">
+            <div class="container">
+                <div class="copyright-area-content">
+                    <p>
+                        Copyright © <script>document.write(new Date().getFullYear())</script>, by 
+                        <a href="#">ElingBali Developer</a>
+                    </p>
+                </div>
             </div>
-            <div class="row" style="margin-top:20px;display:none;">
-              <div class="col-md-12">
-                <span style="font-size: 25px;color: white;">Call Center</span><br>
-              <a href="whatsapp://send?text=Halo&phone=+6285848402242" style="color: white;">+62 123-456-789</a>
-              </div>
-            </div>
-          </div>
         </div>
-        <!--Footer Widget End--> 
-        <!--Footer Widget Start-->
-        <div class="col-md-3 col-sm-6">
-          <div class="footer-widget">
-            <h6>Download Eling Medan</h6>
-            <ul>
-              <li><a href="#" target="_blank">Play Store</a></li>
-              <li><a href="#" target="_blank">App Store</a></li>
-            </ul>
-          </div>
+        <!-- End Copy Right Area -->
+
+        <!-- Start Go Top Area -->
+        <div class="go-top">
+            <i class='bx bx-up-arrow-alt'></i>
         </div>
-        <!--Footer Widget End--> 
-        <!--Footer Widget Start-->
-        <!-- <div class="col-md-3 col-sm-6">
-          <div class="twitter-widget">
-            <div class="tw-txt">
-              <h6>@john.flintoff</h6>
-              <a href="#" class="reply-tw"><i class="fas fa-reply"></i></a>
-              <p> The Hightst Glory of the Citizen’s revolution was this; it connected in one indissoluble bond the principles of civil govt. with humanity principles. </p>
-            </div>
-            <div class="tw-footer"> @Balad.gov <strong>3 November, 2019</strong> <i class="fab fa-twitter"></i> </div>
-          </div>
-        </div> -->
-        <!--Footer Widget End--> 
-      </div>
-    </div>
-  </footer>
-  <!--Footer Start--> 
-  <!--Footer Start-->
-  <footer class="home3 footer wf100" style="background-color: black;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7 col-sm-7">
-          <p class="copyr" style="color: white !important;">Copy Rights © 2023, By: <a href="#">Eling Medan Developer</a></p>
+        <!-- End Go Top Area -->
+
+        <!-- dark version -->
+        <div class="dark-version">
+            <label id="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
         </div>
-        <div class="col-md-5 col-sm-5">
-          <ul class="footer-social">
-            <li><a href="https://www.facebook.com/SmartCity_Mdn" target="_blank" class="fb"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://twitter.com/SmartCity_Medan" target="_blank" class="tw"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.instagram.com/smartcity.medan/" target="_blank" class="insta"><i class="fab fa-instagram"></i></a></li>
-			<li><a href="https://wa.me/6285277032277" target="_blank" class="wa"><i class="fab fa-whatsapp"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </footer>
+        <!-- dark version -->

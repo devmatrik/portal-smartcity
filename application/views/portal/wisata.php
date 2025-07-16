@@ -1,54 +1,52 @@
-<!--Subheader Start-->
-<section class="wf100 subheader" style="background: url('<?php echo base_url('assets/portal')?>/img/hero-sub.png') no-repeat !important;">
-  <div class="container">
-      <h2>Wisata </h2>
-      <ul>
-        <li> <a href="<?= base_url()?>">Beranda</a> </li>
-        <li> Wisata </li>
-      </ul>
-  </div>
-</section>
-<!--Subheader End--> <div class="main-content">
-  <div class="events-wrapper events-listing">
-      <div class="container">
-        <div class="row">
-          <?php foreach( $event as $evn ):
-          ?>
-            <div class="col-md">
-              <!--Event List Box Start-->
-              <div class="event-list-box">
-                  <ul>
-                    <li class="edate"><strong><?= $evn->jenis_wisata;?></strong></li>
-                    <li> <img src="<?= $evn->image ?>" alt="image-event"> </li>
-                    <li class="event-title">
-                        <h6> <a href="<?= base_url('Portal/wisataSingle/').$evn->rowid?>"><?= $evn->judul?></a> </h6>
-                        <span><?= (str_word_count($evn->isi_konten) > 4 ? substr($evn->isi_konten,0,100)."..." : $evn->isi_konten)?></span> 
-                        <br>
-                        <!--p><i class="fas fa-map-marker-alt"></i> <?= $evn->jenis_wisata?></p-->
-                    </li>
-                    <li> <!-- <a href="#" class="join-now">Join Now</a> --> </li>
-                  </ul>
-                </div>
-                <?php endforeach; ?>
-              <!--Event List Box End--> 
-              <div class="row">
-                     <div class="site-pagination">
-                        <nav aria-label="Page navigation">
-                           <!-- <ul class="pagination">
-                              <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">«</span> </a> </li>
-                              <li><a href="#">1</a></li>
-                              <li><a href="#">2</a></li>
-                              <li class="active"><a href="#">3</a></li>
-                              <li><a href="#">4</a></li>
-                              <li><a href="#">5</a></li>
-                              <li> <a href="#" aria-label="Next"> <span aria-hidden="true">»</span> </a> </li>
-                           </ul> -->
-                           <?= $this->pagination->create_links(); ?>
-                        </nav>
-                     </div>
-                  </div>
-            </div>
+<?php
+$wisata="";
+foreach($kategori as $k){
+	$wisata=$k->id==$kid?$k->kategori:$wisata;
+}
+switch($kid){
+	case 2: $wisata="Wisata Alam"; break;
+	case 3: $wisata="Wisata Kuliner"; break;
+	case 1: $wisata="Kuliner Tradisional"; break;
+	case 4: $wisata="Adat dan Budaya"; break;
+	case 5: $wisata="Tempat Rekreasi"; break;
+	case 6: $wisata="Oleh-oleh Khas"; break;
+	case 7: $wisata="Penginapan"; break;
+}
+?>		
+		
+		<!-- Jumbotron -->
+        <div
+            class=" bg-image p-5"
+            style="background-image: url('<?= base_url('assets/images')?>/003.webp'); height: 200px;">
+            <h2 style="color: #ffff;"><?=$wisata?></h2>
+            <h5 style="color: #ffff; font-weight: 300; opacity: 50%;" >Rekomendasi <?=$wisata?> di Bali</h5>
         </div>
-      </div>
-  </div>
-</div>
+        <!-- Jumbotron -->
+		<!-- Start Default News Area -->
+        <section class="default-news-area">
+            <div class="container">
+                <div class="tech-news ptb-50">
+					<div class="row">
+					<?php foreach($artikel as $b){?>
+						<div class="col-lg-3 col-sm-3 ">
+                            <div class="single-tech-news-box" style="border-radius: 10px;">
+                                <a href="<?= base_url('portal/wisataSingle/').$b->rowid."/?x=".str_ireplace(" ","_",$b->judul)?>">
+                                    <img src="<?= $b->image;?>" alt="image">
+                                </a>
+                                
+                                <div class="tech-news-content">
+                                    <h3>
+                                        <a href="<?= base_url('portal/wisataSingle/').$b->rowid."/?x=".str_ireplace(" ","_",$b->judul)?>"><?= $b->judul ?></a>
+                                    </h3>
+                                    <!--p><?= date('d M Y',strtotime($b->ctddate)) ?></p-->
+                                </div>
+                            </div>
+                        </div>
+					<?php }?>
+					</div>
+                </div>
+				<?= $this->pagination->create_links(); ?>
+            </div>
+        </section>
+        <!-- End News Area -->
+

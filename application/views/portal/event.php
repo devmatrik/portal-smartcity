@@ -1,61 +1,84 @@
-<!--Subheader Start-->
-<section class="wf100 subheader" style="background: url('<?php echo base_url('assets/portal')?>/img/hero-sub.png') no-repeat !important;">
-  <div class="container">
-      <h2>Event</h2>
-      <ul>
-        <li> <a href="<?= base_url()?>">Beranda</a> </li>
-        <li> Event </li>
-      </ul>
-  </div>
-</section>
-<!--Subheader End--> 
-<div class="main-content">
-  <div class="events-wrapper events-listing">
-      <div class="container">
-        <div class="row">
-          <?php foreach( $event as $evn ):
-//            $gambarpertama=explode(";",$evn->uploadedfile); 
-            $start_date = strtotime( $evn->tgl_event );
-            $sd = date( 'd M Y', $start_date ); 
-            //$jam_start = strtotime($evn->jam_start);
-            //$dte = date('H:i',$jam_start);
-          
-          ?>
-            <div class="col-md">
-              <!--Event List Box Start-->
-              <div class="event-list-box">
-                  <ul>
-                    <li class="edate"><strong><?= $sd;?></strong></li>
-                    <li> <img src="<?= $evn->image ?>" alt="image-event"> </li>
-                    <li class="event-title">
-                        <h6> <a href="<?= base_url('Portal/eventSingle/').$evn->rowid?>"><?= $evn->nama_event?></a> </h6>
-                        <span><?= $evn->isi_konten?></span> 
-                        <br>
-                        <!--p><i class="fas fa-map-marker-alt"></i> <?= $evn->jenis_event?></p-->
-                    </li>
-                    <li> <!-- <a href="#" class="join-now">Join Now</a> --> </li>
-                  </ul>
+        <!-- Start Main News Slider Area --
+        <section class="main-news-slider-area">
+            <div class="container">
+
+                <div class="section-title"> 
+                    <h2>Events</h2> 
                 </div>
-                <?php endforeach; ?>
-              <!--Event List Box End--> 
-              <div class="row">
-                     <div class="site-pagination">
-                        <nav aria-label="Page navigation">
-                           <!-- <ul class="pagination">
-                              <li> <a href="#" aria-label="Previous"> <span aria-hidden="true">«</span> </a> </li>
-                              <li><a href="#">1</a></li>
-                              <li><a href="#">2</a></li>
-                              <li class="active"><a href="#">3</a></li>
-                              <li><a href="#">4</a></li>
-                              <li><a href="#">5</a></li>
-                              <li> <a href="#" aria-label="Next"> <span aria-hidden="true">»</span> </a> </li>
-                           </ul> -->
-                           <?= $this->pagination->create_links(); ?>
-                        </nav>
-                     </div>
-                  </div>
+                <div class="main-news-slides owl-carousel owl-theme">
+<php foreach($slider as $e){?>
+                    <div class="news-slider-item">
+                        <a href="<= base_url('portal/eventSingle/').$e->id."/?x".str_ireplace(" ","_",$e->judul_event);?>">
+                            <!--img src="<= base_url('bali/');?>assets/img/main-news-slider/main-news-slider-1.jpg" alt="image"--
+							<img src="<= base_url().substr($e->uploadedfile,1)?>" alt="">
+                        </a>
+
+                        <div class="slider-content">
+                            <div class="tag">event</div>
+                            <h3 style="font-size: 24px;">
+                                <a href="<= base_url('portal/eventSingle/').$e->id."/?x=".str_ireplace(" ","_",$e->judul_event);?>"><= $e->judul_event?></a>
+                            </h3>
+                            <span><a href=""><= $e->lokasi?></a> / <= date('d M Y',strtotime($e->tgl_start))?> - <= date('d M Y',strtotime($e->tgl_end))?></span>
+                        </div>
+                    </div>
+<php }?>
+                    
+                </div>
             </div>
-        </div>
-      </div>
-  </div>
-</div>
+        </section>
+        <!-- End Main News Slider Area -->
+
+        <!-- Start Default News Area -->
+        <section class="news-area ptb-50">
+            <div class="container">
+                <div class="row"><div class="col-lg-12">
+				<div class="section-title"> 
+                    <h2>Events</h2> 
+                </div></div></div>
+                <div class="row">
+                    <div class="col-lg-12">
+					<?php foreach($event as $e){?>
+                        <div class="single-culture-news">
+                            <div class="row align-items-center">
+                                <div class="col-lg-4">
+                                    <div class="culture-news-image">
+                                        <a href="<?= base_url('portal/eventSingle/').$e->rowid."/?x=".str_ireplace(" ","_",$e->nama_event);?>">
+                                            <img src="<?= $e->image ?>" alt="image">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-8">
+                                    <div class="culture-news-content mt-0">
+                                        <span><?= $e->jenis_event ?></span>
+                                        <h3>
+                                            <a href="<?= base_url('portal/eventSingle/').$e->rowid."/?x=".str_ireplace(" ","_",$e->nama_event);?>"><?= $e->nama_event ?></a>
+                                        </h3>
+                                        <p><?= substr($e->isi_konten,0,75) ?>...</p>
+                                        <p><?= date('d M Y',strtotime($e->tgl_event)) ?> - <?= date('d M Y',strtotime($e->tgl_berakhir)) ?></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+					<?php }?>
+
+
+                        <!--div class="pagination-area justify-content-center">
+                            <a href="#" class="prev page-numbers">
+                                <i class='bx bx-chevron-left'></i>
+                            </a>
+                            <a href="#" class="page-numbers">1</a>
+                            <span class="page-numbers current" aria-current="page">2</span>
+                            <a href="#" class="page-numbers">3</a>
+                            <a href="#" class="page-numbers">4</a>
+                            <a href="#" class="next page-numbers">
+                                <i class='bx bx-chevron-right'></i>
+                            </a>
+                        </div-->
+						<?= $this->pagination->create_links(); ?>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Default News Area -->
+        

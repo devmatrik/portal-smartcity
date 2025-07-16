@@ -253,14 +253,52 @@ class MArtikel extends CI_Model {
        return json_encode($output);
     }
 
-    function data_berita($number,$offset){
-        $this->db->select("judul_artikel,ar.id as id,deskripsi,kategori_id,kategori,gambar,ctd_date");
+    function data_berita($number,$offset,$katid){
+		$where=array('ar.status' => 1);
+		if($katid!='') $where=array('ar.status' => 1,'ar.kategori_id'=>$katid);
+        $this->db->select("judul_artikel,ar.id as id,deskripsi,judul_artikel,kategori_id,kategori,gambar,ctd_date");
+        $this->db->join('kategori_artikel k', 'k.id = ar.kategori_id', 'left');
+        $this->db->order_by('ar.id', 'desc');
+		return $query = $this->db->get_where('artikel ar',$where,$number,$offset)->result();		
+	}
+ 
+	function jumlah_data_berita($katid){
+		$where=array('status' => 1);
+		if($katid!='') $where=array('status' => 1,'kategori_id'=>$katid);
+        return $this->db->get_where('artikel',$where)->num_rows();
+	}
+	
+	 public function pies(){
+                $this->db->select("kategori,count(kategori) as cc");
+                $this->db->from("kategori_artikel");
+                $this->db->join("artikel","artikel.kategori_id=kategori_artikel.id");
+                $this->db->where(array("artikel.status"=>"1","kategori_artikel.status"=>"1"));
+                $this->db->group_by("kategori");
+                return $this->db->get()->result();
+        }
+		
+	function berita_utama($number=4,$offset=0){
+        $this->db->select("judul_artikel,ar.id as id,judul_artikel,kategori_id,kategori,gambar,ctd_date");
         $this->db->join('kategori_artikel k', 'k.id = ar.kategori_id', 'left');
         $this->db->order_by('ar.id', 'desc');
 		return $query = $this->db->get_where('artikel ar',['ar.status' => 1],$number,$offset)->result();		
 	}
- 
-	function jumlah_data_berita(){
-		return $this->db->get_where('artikel',['status' => 1])->num_rows();
+	
+	function kategories(){
+		$kategori=$this->db->get("kategori_artikel")->result();
+		return $kategori;
 	}
+	
+	function berita_homekat(){
+		$maxberita=$this->db->select("kategori_id,max(id) as mid")->where("status","1")->group_by("kategori_id")->get("artikel")->result();
+		$ids=array();
+		foreach($maxberita as $mb){
+			$ids[]=$mb->mid;
+		}
+		$this->db->select("judul_artikel,ar.id as id,judul_artikel,kategori_id,kategori,gambar,ctd_date");
+        $this->db->join('kategori_artikel k', 'k.id = ar.kategori_id', 'left');
+        $this->db->order_by('ar.id', 'desc');
+		return $this->db->where_in("ar.id",$ids)->get("artikel ar")->result();
+	}
+
 }

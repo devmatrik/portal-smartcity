@@ -291,7 +291,7 @@
             </div>
             <!--Icon Box End--> 
 
-            <!--Icon Box Start--
+            <!--Icon Box Start-->
             <div class="item">
               <div class="deprt-icon-box-maps deprt-icon-box"> 
                 <a href="javascript:void(0);" onClick="cari('black_spot')">
@@ -300,9 +300,9 @@
                 </a>
               </div>
             </div>
-            <!--Icon Box End--
+            <!--Icon Box End--> 
 
-            <!--Icon Box Start--
+            <!--Icon Box Start-->
             <div class="item">
               <div class="deprt-icon-box-maps deprt-icon-box"> 
                 <a href="javascript:void(0);" onClick="cari('trouble_spot')">
@@ -311,9 +311,9 @@
                 </a>
               </div>
             </div>
-            <!--Icon Box End-- 
+            <!--Icon Box End--> 
 
-            <!--Icon Box Start--
+            <!--Icon Box Start-->
             <div class="item">
               <div class="deprt-icon-box-maps deprt-icon-box"> 
                 <a href="javascript:void(0);" onClick="cari('ambang_gangguan')">

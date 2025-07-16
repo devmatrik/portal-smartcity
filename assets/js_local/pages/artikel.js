@@ -23,7 +23,7 @@ function dt_artikel() {
         },
         //Set column definition initialisation properties
         "columnDefs": [{
-            "targets": [0,2],
+            "targets": [0,4,5],
             "orderable": false
         }]
     });

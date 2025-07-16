@@ -1,13 +1,11 @@
 const months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 const token = "c81185605c84873d5cd676d6eeb64bcb"
 $(document).ready(function () {
-//	nextevents()
-//	nowevents()
-//	doneevents()
-//	eventbigsmall()
-//	dept()
-slik()
-
+	nextevents()
+	nowevents()
+	doneevents()
+	eventbigsmall()
+	dept()
 });
 
 
@@ -88,7 +86,7 @@ function doneevents() {
 	$.ajax({
         type: "POST",
         url: "Api/event",
-		data:{status : 3, limit : 6},
+		data:{status : 3},
 		headers: {"token": token},
         dataType: "json",
         success: function (data) {
@@ -121,7 +119,6 @@ function eventbigsmall() {
 		type: "POST",
         url: "Api/event",
         dataType: "json",
-		data:{limit : 10},
 		headers: {"token": token},
 		success: function (data) {
 			data.data.forEach(v => {
@@ -188,28 +185,4 @@ function dept() {
 			});
         }
     });
-}
-
-function slik(){
-	//if ($('.recent-event-slider').length) {
-		$('.recent-event-slider').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			fade: true,
-			adaptiveHeight: true,
-			autoplay: true,
-			autoplaySpeed: 6000,
-			asNavFor: '.recent-event-slider-nav'
-		});
-		$('.recent-event-slider-nav').slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			asNavFor: '.recent-event-slider',
-			arrows:false,
-			dots: false,
-			centerMode: false,
-			focusOnSelect: true,
-		});
-	//}
 }

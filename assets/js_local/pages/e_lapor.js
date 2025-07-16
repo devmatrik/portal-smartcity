@@ -614,9 +614,9 @@ function send() {
         e.preventDefault();
         $.ajax({
           type: "POST",
-          url: "",//"https://backoffice.elingsolo.com/sm-ci/PublicService/save",
+          url: "https://backoffice.elingsolo.com/sm-ci/PublicService/save",
           headers: {
-            //"X-token": "45fd595dcb1cdb51293fee28335c43487f4eaa2e940db4f589bec08cfae723a2",
+            "X-token": "45fd595dcb1cdb51293fee28335c43487f4eaa2e940db4f589bec08cfae723a2",
             // "Cookie": "ci_session=m7lob3clpojmb1c41didd1ovusrn43gc"
           },
           mimeType: "multipart/form-data",
