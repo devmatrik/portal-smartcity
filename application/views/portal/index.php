@@ -77,7 +77,7 @@
   <!--Main Content Start-->
   <div class="main-content"> 
     <!--Mayor Msg with Video Start-->
-    <section class="Mayor-video-msg" style="background: url('<?= base_url('assets/portal/');?>img/banner.svg') no-repeat; background-size: cover;">
+    <section class="Mayor-video-msg" style="background: url('<?= base_url('assets/portal/');?>img/banner.png') no-repeat; background-size: cover;">
       <div class="container">
         <div class="row">
         <?php foreach($banner_vid as $vbn):?>
@@ -85,7 +85,7 @@
             <!--Mayor Msg Start-->
             <div class=" gallery" style="text-align:center;"> 
               <!-- <a href="<?= $vbn->link_vid?>" data-rel="prettyPhoto" title="<?= $vbn->judul?>"-->
-              <img src="<?= base_url('assets/portal/');?>img/eling-bandung.svg" alt=""><!--/a-->
+              <img src="<?= base_url('assets/portal/');?>img/eling-bandung.png" alt=""><!--/a-->
               <!--img src="<?= base_url('data/banner/'.$vbn->thumbnail);?>" alt="" --> 
               <!-- <img src="<?= base_url('assets/images/');?>unsplash_UmV2wr-Vbq8.png" alt="" style="height:293px;width:390px">  -->
             </div>

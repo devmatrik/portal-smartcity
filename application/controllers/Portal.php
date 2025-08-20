@@ -48,7 +48,7 @@ class Portal extends CI_Controller {
 					(object)array("image"=>"patroli-cctv.svg","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/4")),
 					(object)array("image"=>"public-service.svg","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/5")),
 					(object)array("image"=>"it-aset.svg","nama_departemen"=>"Media","lnk"=>base_url("Portal/detailDept/6"))),
-			'banner' => array((object)array("image"=>'hero.svg',"title"=>'',"subtitle"=>'')),
+			'banner' => array((object)array("image"=>'hero.png',"title"=>'',"subtitle"=>'')),
 			'banner_vid' => array((object)array("link_vid"=>'',"thumbnail"=>'banner.svg',"judul"=>'Bandung Smart City',
 			"deskripsi"=>'Bandung Smart City dengan pendekatan Road Safety Policing adalah model dan cara serta alat untuk mendukung terwujudnya kondisi kota yang aman, selamat, tertib, dan lancar dengan melakukan kolaborasi antara Kepolisian dan Pemerintah Kota Bandung',
 			"nama"=>'Electronic Policing',"tag"=>'Sistem Pemolisian berbasis elektronik')),
