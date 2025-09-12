@@ -91,7 +91,7 @@
     <strong>Kebijakan Penyimpanan Data</strong>
     <p>Penyedia Layanan akan menyimpan data yang Anda berikan selama Anda menggunakan Aplikasi dan dalam jangka waktu
         yang wajar setelahnya. Jika Anda ingin agar data yang telah Anda berikan dihapus, silakan hubungi kami di
-        elingbandung@gmail.com dan kami akan merespons dalam waktu yang wajar.</p><br>
+        developer@elingbandung.com dan kami akan merespons dalam waktu yang wajar.</p><br>
 
     <strong>Anak-anak</strong>
     <p>Penyedia Layanan tidak menggunakan Aplikasi untuk secara sengaja mengumpulkan data atau memasarkan kepada
@@ -103,7 +103,7 @@
             dan wali untuk mengawasi penggunaan internet anak-anak mereka dan membantu memberlakukan kebijakan ini
             dengan menginstruksikan anak-anak agar tidak memberikan informasi pribadi tanpa izin. Jika Anda yakin bahwa
             seorang anak telah memberikan informasi pribadi melalui Aplikasi, silakan hubungi kami di
-            elingbandung@gmail.com agar kami dapat mengambil tindakan yang diperlukan. Anda harus berusia minimal 16
+            developer@elingbandung.com agar kami dapat mengambil tindakan yang diperlukan. Anda harus berusia minimal 16
             tahun untuk memberikan persetujuan atas pemrosesan data pribadi Anda (di beberapa negara, orang tua atau
             wali dapat melakukannya atas nama Anda).</p>
     </div><br>
@@ -125,7 +125,7 @@
 
     <strong>Hubungi Kami</strong>
     <p>Jika Anda memiliki pertanyaan terkait privasi saat menggunakan Aplikasi, atau memiliki pertanyaan tentang praktik
-        kami, silakan hubungi Penyedia Layanan melalui email di elingbandung@gmail.com.</p>
+        kami, silakan hubungi Penyedia Layanan melalui email di developer@elingbandung.com.</p>
     <hr>
 
 </body>

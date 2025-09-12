@@ -81,7 +81,7 @@
 
     <strong>Hubungi Kami</strong>
     <p>Jika Anda memiliki pertanyaan atau saran tentang Syarat dan Ketentuan ini, silakan hubungi Penyedia Layanan
-        melalui email di elingbandung@gmail.com.</p>
+        melalui email di developer@elingbandung.com.</p>
 
 </body>
 
