@@ -18,7 +18,7 @@
           <div class="col-md-12 col-sm-7">
             <div class="Mayor-welcome text-center">
               <!--img src="../assets/images/LOGO-ELING.png" alt="" style="width: 170px;margin-bottom:5rem"-->
-                <p><img  src="../assets/images/yogya_Page_1.png" style="max-width:100%;"></p>
+                <p><img  src="../assets/images/Peta_FDTB_Juli_2025_Page_1.png" style="max-width:100%;"></p>
             </div>
           </div>
           
