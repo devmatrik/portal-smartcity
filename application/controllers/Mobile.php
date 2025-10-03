@@ -21,6 +21,16 @@ class Mobile extends CI_Controller {
 	{
 		$this->load->view('term-condition',[]);
 	}
+
+	public function privacy_policys()
+	{
+		$this->load->view('privacy-policy',[]);
+	}
+	public function term_conditions()
+	{
+		$this->load->view('term-condition',[]);
+	}
+
 	public function tm_bandung($p)
 	{
 		$this->load->view('tm_'.$p,[]);
