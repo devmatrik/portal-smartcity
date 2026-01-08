@@ -24,7 +24,7 @@
             <div class="row" style="margin-top:20px">
               <div class="col-md-12">
                 <span style="font-size: 25px;color: white;">Email</span><br>
-                <a href="#" style="color: white">belum ada</a>
+                <a href="mailto:elingbandung@gmail.com" style="color: white">elingbandung@gmail.com</a>
               </div>
             </div>
             <div class="row" style="margin-top:20px;display:none;">

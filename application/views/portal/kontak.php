@@ -25,8 +25,8 @@
               <ul><li><i class="fas fa-building"></i> <strong>Alamat:</strong> <br>
                     Jl. Merdeka No.18-21, Babakan Ciamis, Kec. Sumur Bandung, Kota Bandung, Jawa Barat 40117
                 </li>
-                <li><i class="far fa-envelope"></i><strong> Email:</strong> belumada</li>
-                <li><i class="fab fa-whatsapp"></i> <strong> Whatsapp: </strong><a target="_blank" href="https://wa.me/">+62-belumada</a></li>
+                <li><i class="far fa-envelope"></i><strong> Email:</strong> elingbandung@gmail.com</li>
+                <!--li><i class="fab fa-whatsapp"></i> <strong> Whatsapp: </strong><a target="_blank" href="https://wa.me/">+62-belumada</a></li-->
                 
               </ul>
           </div>
