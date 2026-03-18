@@ -21,7 +21,7 @@ class Mobile extends CI_Controller {
 	{
 		$this->load->view('term-condition',[]);
 	}
-	public function tm_jogja($p)
+	public function tm_medan($p)
 	{
 		$this->load->view('tm_'.$p,[]);
 	}
