@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class MApi extends CI_Model {
-	private $url = "https://backend.elingbali.com:8082/api/v.0.1/";
+	private $url = "https://be.elingbali.com/api/v.0.1/";
 	private $token = "5b3dac76aaee24d14185cbc3d010fd20";
 	
 	public function post($url,$param){
