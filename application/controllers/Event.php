@@ -46,7 +46,7 @@ class Event extends CI_Controller {
 				
 				if ( $this->upload->do_upload('file')){
 						$ret[]= $path.$this->upload->data('file_name');
-					}
+					}//else{ $ret[]= $this->upload->display_errors(); }
 			}
 		}
 		

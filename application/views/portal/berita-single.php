@@ -1,8 +1,5 @@
-<?php
-$artikel=$art->data;
-?>
 <!--Sub Header Start-->
-         <section class="wf100 subheader" style="background: url('<?php echo base_url('assets/portal')?>/img/hero-submenu.svg') no-repeat !important; background-size: cover !important;">
+         <section class="wf100 subheader">
             <div class="container">
                <h2>Detail Berita</h2>
                <ul>
@@ -23,16 +20,16 @@ $artikel=$art->data;
                        <div class="new-thumb"> 
                           <a href="#">
                             <i class="fas fa-link"></i></a> 
-                            <span class="cat c4"><?= $artikel->jenis_berita?></span> 
-                            <img src="<?= $artikel->image?>" alt=""> 
+                            <span class="cat c4"><?= $artikel->kategori?></span> 
+                            <img src="<?=base_url();?>data/artikel/<?= $artikel->gambar?>" alt=""> 
                         </div>
                         <div class="news-box" style="height: auto;">
                           <div class="new-txt">
                             <ul class="news-meta">
-                                <li><?= date('d M Y',strtotime($artikel->ctddate))?></li>
+                                <li><?= $artikel->ctd_date?></li>
                             </ul>
-                            <h4><?= $artikel->judul_news?></h4>
-                            <p><?php echo nl2br($artikel->isi_konten)?></p>
+                            <h4><?= $artikel->judul_artikel?></h4>
+                            <p><?php echo nl2br($artikel->deskripsi)?></p>
                           </div>
                         </div>
                      </div>
@@ -55,20 +52,12 @@ $artikel=$art->data;
                             <h4>Post Lalu</h4>
                               <div class="recent-posts inner">
                                  <ul>
-                                    <?php 
-									$i=0;
-									foreach ($recentAr->data as $ra) {
-									if($ra->rowid<$artikel->rowid){
-									$i++;
-									?>
+                                    <?php foreach ($recentAr as $ra) { ?>
                                        <li>
-                                          <img src="<?=$ra->image?>" alt=""> <strong><?= date('Y-m-d',strtotime($ra->ctddate))?></strong>
-                                          <h6> <a href="<?= base_url('Portal/beritaSingle/').$ra->rowid?>"><?= $ra->judul_news?> </a> </h6>
+                                          <img src="<?=base_url('data/artikel/').$ra->gambar?>" alt=""> <strong><?= $ra->ctd_date?></strong>
+                                          <h6> <a href="<?= base_url('Portal/beritaSingle/').$ra->id?>"><?= $ra->judul_artikel?> </a> </h6>
                                        </li>
-                                    <?php }
-									if($i>5){break;}
-									}
-									?>
+                                    <?php };?>
                                  </ul>
                               </div>
                            </div>
@@ -89,24 +78,11 @@ $artikel=$art->data;
                            </div> -->
                            <!--Widget End--> 
                            <!--Widget Start-->
-                           <div class="widget" style="display:none;">
-                           <h4>Post Berikutnya</h4>
-                              <div class="recent-posts inner">
-                                 <ul>
-                                    <?php 
-									$i=0;
-									foreach ($recentAr->data as $ra) {
-									if($ra->rowid>$artikel->rowid){
-									$i++;
-									?>
-                                       <li>
-                                          <img src="<?=$ra->image?>" alt=""> <strong><?= date('Y-m-d',strtotime($ra->ctddate))?></strong>
-                                          <h6> <a href="<?= base_url('Portal/beritaSingle/').$ra->rowid?>"><?= $ra->judul_news?> </a> </h6>
-                                       </li>
-                                    <?php }
-									if($i>2 || $ra->rowid==$artikel->rowid){break;}
-									}
-									?>
+                           <div class="widget">
+                           <h4>Yang Akan Datang</h4>
+                              <div class="upcoming-events inner">
+                                 
+                                 <ul id="nextEvents">
                                  </ul>
                               </div>
                            </div>
@@ -129,7 +105,7 @@ $artikel=$art->data;
                            <!--Widget End--> 
                            
                            <!--Widget Start-->
-                           <div class="widget" style="display:none;">
+                           <div class="widget">
                             <h4>Tags</h4>
                               <div class="tags-widget inner">
                                  <?php foreach ($tags as $t) {?>

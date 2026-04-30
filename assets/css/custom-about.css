@@ -9,6 +9,9 @@
   .text-center h5, p{
     color: black !important;
   }
+  .text-center{
+    padding: 50px 0;
+  }
   .news-box{
     height: 43rem;
   }

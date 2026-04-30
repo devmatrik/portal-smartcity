@@ -1,13 +1,11 @@
 const months = ["JAN", "FEB", "MAR","APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
 const token = "c81185605c84873d5cd676d6eeb64bcb"
 $(document).ready(function () {
-//	nextevents()
-//	nowevents()
-//	doneevents()
-//	eventbigsmall()
-//	dept()
-slik()
-
+	nextevents()
+	nowevents()
+	doneevents()
+	eventbigsmall()
+	dept()
 });
 
 
@@ -188,28 +186,4 @@ function dept() {
 			});
         }
     });
-}
-
-function slik(){
-	//if ($('.recent-event-slider').length) {
-		$('.recent-event-slider').slick({
-			slidesToShow: 1,
-			slidesToScroll: 1,
-			arrows: false,
-			fade: true,
-			adaptiveHeight: true,
-			autoplay: true,
-			autoplaySpeed: 6000,
-			asNavFor: '.recent-event-slider-nav'
-		});
-		$('.recent-event-slider-nav').slick({
-			slidesToShow: 4,
-			slidesToScroll: 1,
-			asNavFor: '.recent-event-slider',
-			arrows:false,
-			dots: false,
-			centerMode: false,
-			focusOnSelect: true,
-		});
-	//}
 }

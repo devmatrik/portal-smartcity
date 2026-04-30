@@ -1,37 +1,26 @@
-<!--Subheader Start-->
-<section class="wf100 subheader" style="background: url('<?php echo base_url('assets/portal')?>/img/hero-submenu.svg') no-repeat !important; background-size: cover !important;">
-  <div class="container">
-      <h2>Event</h2>
-      <ul>
-        <li> <a href="<?= base_url()?>">Beranda</a> </li>
-        <li> Event </li>
-      </ul>
-  </div>
-</section>
-<!--Subheader End--> 
 <div class="main-content">
   <div class="events-wrapper events-listing">
       <div class="container">
         <div class="row">
           <?php foreach( $event as $evn ):
-//            $gambarpertama=explode(";",$evn->uploadedfile); 
-            $start_date = strtotime( $evn->tgl_event );
-            $sd = date( 'd M Y', $start_date ); 
-            //$jam_start = strtotime($evn->jam_start);
-            //$dte = date('H:i',$jam_start);
+            $gambarpertama=explode(";",$evn->uploadedfile); 
+            $start_date = strtotime( $evn->tgl_start );
+            $sd = date( 'd M,Y', $start_date ); 
+            $jam_start = strtotime($evn->jam_start);
+            $dte = date('H:i',$jam_start);
           
           ?>
             <div class="col-md">
               <!--Event List Box Start-->
               <div class="event-list-box">
                   <ul>
-                    <li class="edate"><strong><?= $sd;?></strong></li>
-                    <li> <img src="<?= $evn->image ?>" alt="image-event"> </li>
+                    <li class="edate"><strong><?= $sd;?></strong> <?= $dte?></li>
+                    <li> <img src="<?= base_url().$gambarpertama[0]?>" alt="image-event"> </li>
                     <li class="event-title">
-                        <h6> <a href="<?= base_url('Portal/eventSingle/').$evn->rowid?>"><?= $evn->nama_event?></a> </h6>
-                        <span><?= $evn->isi_konten?></span> 
+                        <h6> <a href="<?= base_url('Portal/eventSingle/').$evn->id?>"><?= $evn->judul_event?></a> </h6>
+                        <span><?= $evn->deskripsi_event?></span> 
                         <br>
-                        <!--p><i class="fas fa-map-marker-alt"></i> <?= $evn->jenis_event?></p-->
+                        <p><i class="fas fa-map-marker-alt"></i> <?= $evn->lokasi?></p>
                     </li>
                     <li> <!-- <a href="#" class="join-now">Join Now</a> --> </li>
                   </ul>

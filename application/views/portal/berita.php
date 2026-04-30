@@ -1,5 +1,5 @@
 <!--Sub Header Start-->
-<section class="wf100 subheader" style="background: url('<?php echo base_url('assets/portal')?>/img/hero-submenu.svg') no-repeat !important; background-size: cover !important;">
+<section class="wf100 subheader">
             <div class="container">
                <h2>Berita & Artikel Terupdate</h2>
                <ul>
@@ -19,14 +19,14 @@
                     <?php foreach($artikel as $ar):?>
                         <div class="col-md-3 col-sm-6">
                             <div class="news-box">
-                                <div class="new-thumb"> <span class="cat c1"><?= $ar->jenis_berita?></span> <img src="<?= $ar->image?>" alt=""> </div>
+                                <div class="new-thumb"> <span class="cat c1"><?= $ar->kategori?></span> <img src="<?= base_url().'data/artikel/'.$ar->gambar;?>" alt=""> </div>
                                 <div class="new-txt">
                                 <ul class="news-meta">
-                                    <li><?= substr($ar->ctddate,0,10).' '.$ar->ctdtime?></li>
+                                    <li><?= $ar->ctd_date?></li>
                                     <!-- <li>176 Comments</li> -->
                                 </ul>
-                                <h6><a href="<?= base_url('Portal/beritaSingle/').$ar->rowid?>"><?= $ar->judul_news ?></a></h6>
-                                    <p> <?= (str_word_count($ar->isi_konten) > 4 ? substr($ar->isi_konten,0,100)."..." : $ar->isi_konten) ?> </p>
+                                <h6><a href="<?= base_url('Portal/beritaSingle/').$ar->id?>"><?= $ar->judul_artikel ?></a></h6>
+                                    <p> <?= (str_word_count($ar->deskripsi) > 4 ? substr($ar->deskripsi,0,100)."..." : $ar->deskripsi) ?> </p>
                                 </div>
                                 <!-- <div class="news-box-f"> <img src="<?= base_url('assets/portal/');?>images/tuser1.jpg" alt=""> Johny Stewart <a href="#"><i class="fas fa-arrow-right"></i></a> </div> -->
                             </div>

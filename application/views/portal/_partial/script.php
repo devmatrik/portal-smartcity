@@ -24,7 +24,7 @@
 <script type="text/javascript" src="<?= base_url('assets/portal/');?>js/rev-slider/js/extensions/revolution.extension.parallax.min.js"></script> 
 <script type="text/javascript" src="<?= base_url('assets/portal/');?>js/rev-slider/js/extensions/revolution.extension.slideanims.min.js"></script> 
 <script type="text/javascript" src="<?= base_url('assets/portal/');?>js/rev-slider/js/extensions/revolution.extension.video.min.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL_aHwpdqEvFPQmhorKU3G4FtzoXIQ6ks&libraries=places&v=beta&callback=initMap"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBL_aHwpdqEvFPQmhorKU3G4FtzoXIQ6ks&libraries=places,localContext&v=beta&callback=initMap"></script>
 	<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
 <?php 
     $baseUrl = base_url();
@@ -46,8 +46,6 @@
     var monthNames = [ "Januari", "Februari", "Maret", "April", "Mei", "Juni", "July", "Agustus", "September", "Oktober", "November", "Desember" ]; 
     var dayNames= ["Minggu","Senin","Selasa","Rabu","Kamis","Jum'at","Sabtu"]
     $(document).ready(function () {
-		
-		//$(".subheader").removeAttr("style").attr("style","background: url('<?php echo base_url('assets/portal')?>/img/hero-submenu.svg') no-repeat center !important;");
         // tags();
     // Create a newDate() object
     var newDate = new Date();

@@ -28,26 +28,24 @@
                         <nav class="navbar">
                            <div class="navbar-header">
                               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                              <a class="navbar-brand" href="<?=base_url()?>"><img src="<?= base_url('assets/portal/img/logo-eling-bdg-menubar.svg')?>" style="width:152px; height:52px" alt=""></a> 
+                              <a class="navbar-brand" href="<?=base_url()?>"><img src="<?= base_url('assets/portal/img/logoeling.png')?>" style="width:152px; height:52px" alt=""></a> 
                            </div>
                            <!-- Collect the nav links, forms, and other content for toggling -->
                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
                                 <li> <a href="<?=base_url()?>">Beranda</a></li>
                                 <li> <a href="<?=base_url('Portal/tentang')?>">Tentang</a></li>
-                                <li> <a href="<?=base_url('Portal/wisata')?>">Wisata</a></li>
+                                <li> <a href="<?=base_url('Portal/dept')?>">Departemen</a></li>
                                 <li> <a href="<?=base_url('Portal/berita')?>">Berita</a></li>
                                 <li> <a href="<?=base_url('Portal/event')?>">Event</a></li>
-                                <!--li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Layanan <span class="caret"></span></a>
+                                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Layanan <span class="caret"></span></a>
                                   <ul class="dropdown-menu">
                                     <li><a href="<?=base_url('Lapor/lapor')?>">E-Lapor</a></li>
                                     <li><a href="<?=base_url('Lapor/service')?>">E-Service</a></li>
                                   </ul>
-                                </li-->
-								<li> <a href="<?=base_url('Portal/publictrans')?>">Rute Transportasi</a></li>
+                                </li>
                                 <li> <a href="<?=base_url('Portal/maps')?>">Eksplorasi Kota</a></li>
                                 <li> <a href="<?=base_url('Kontak')?>">Kontak</a></li>
-								<!--li> <a target="_blank" href="https://sm.elingmedan.com/">Login <i class="fa fa-sign-in-alt"></i></a></li-->
                               </ul>
                               <ul class="nav navbar-nav navbar-right">
                                  <!-- <li class="search-btn"><a class="search-icon" href="#search"> <i class="fas fa-search"></i> </a></li>
